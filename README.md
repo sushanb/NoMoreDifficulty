@@ -8,3 +8,5 @@ For analysing the large chunk of datasets that we got from Apollo website(exclud
 For the front end, we are using HTML, CSS, jQuery, core JavaScript. We chose d3js for US states visualization. We were able to visualize the data from the 50 states plus the District of Columbia.
 
 Contributers: Saurav K Aryal Susan Bhattarai Sumit Dhungel Swapnil Tamrakar
+
+The link is http://midashack.susanbhattarai.space/.
