@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HOME</title>
+	<title>Project MIDAS Hackathon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/about.css">
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" >
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+
 </head>
 <body>
-	<div id="header">
-    <ul><center>
-        <a href="../index.html"><li>Home</li></a>
-        <a href="../html/about.html"><li>About Us</li></a>
-        <a href="../html/project.html"><li>Project</li></a>
-    </ul></center>
+	<div class="container">
+  <div class="jumbotron">
+    <h1>No More Difficulty</h1>      
+    <p>Want to know the statistics of people suffering from the vision, ambulatory, cognitive or hearing difficulties</p>
   </div>
-  
-   
-  <div id="tabs">
-      <center>
-      <a href="../us-map/example/vision.html" target="target"><button>Vision Difficulty</button></a>
-      <a href="../us-map/example/hearing.html" target="target"><button>Hearing Difficulty</button></a>
-      <a href="../us-map/example/Ambulatory.html" target="target"><button>Ambulatory Difficulty</button></a>
-      <a href="../us-map/example/cognitive.html" target="target"><button>Cognitive Difficulty</button></a>
-    </center>
-  </div>
-  <div id="target">
-    <iframe name="target"></iframe>
-  </div>
+  <ul class="nav nav-pills">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About US</a></li>
+    <li class="active"><a href="project.html">Data Visualization</a></li>
+  </ul>
+</div>
+  <center>
+   <h3>What are you looking for?</h3>
+   </center> 
+   <!--
+     <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-8">
+        <ul class="nav nav-pills nav-justified">
+    <li class="active"><a href="../us-map/example/vision.html" target="target">Vision Difficulty</a></li>
+    <li><a href="../us-map/example/hearing.html" target="target">Hearing Difficulties</a></li>
+    <li><a href="../us-map/example/Ambulatory.html" target="target">Ambulatory Difficulties</a></li>
+    <li><a href="../us-map/example/cognitive.html" target="target">Cognitive Difficulties</a></li>
+  </ul>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+-->
+<div class="container">
+ <div class="row">
+    <div class="col-sm-0">
+    </div>
+    <div class="col-sm-8">
+        <ul class="nav nav-pills nav-justified">
+    <li class="animated fadeIn"><a href="../us-map/example/vision.html" target="target">Vision Difficulty</a></li>
+    <li class="animated fadeIn"><a href="../us-map/example/hearing.html" target="target">Hearing Difficulties</a></li>
+    <li class="animated fadeIn"><a href="../us-map/example/Ambulatory.html" target="target">Ambulatory Difficulties</a></li>
+    <li class="animated fadeIn"><a href="../us-map/example/cognitive.html" target="target">Cognitive Difficulties</a></li>
+  </ul>
+    </div>
+    <div class="col-sm-4">
+    </div>
+</div>
+
+<div id="target">
+   <iframe name="target" frameBorder="0"></iframe>
+</div>
+</div>
+
+
 </body>
 </html>

@@ -62,11 +62,12 @@ body{
 {
 	border: 2px bold black;
 	color: black;
-	background-color: 00BCE3;
+
 	
 }
 iframe
 {
 	height: 1200px;
 	width: 100%;
+	frameBorder="0";
 }
