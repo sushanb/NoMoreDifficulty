@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>US Map Demo</title>
+	
+	<style>
+	  #alert {
+	    font-family: Arial, Helvetica, sans-serif;
+	    font-size: 16px;
+	    background-color: #ddd;
+	    color: #333;
+	    padding: 5px;
+	    font-weight: bold;
+	  }
+	</style>
+	<script src="data.js" > </script>
+	<script src="../lib/raphael.js"></script>
+	<!-- <script src="scale.raphael.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+	<script src="color.jquery.js"></script>
+	<script src="../jquery.usmap.js"></script>
+	<script>
+<script>
+	state_dict = {
+	'HI': 'Hawaii', 
+	'AK': 'Alaska', 
+	'FL': 'Florida', 
+	'SC': 'South Carolina', 
+	'GA': 'Georgia', 
+	'AL': 'Alabama', 
+	'NC': 'North Carolina', 
+	'TN': 'Tennesse', 
+	'RI': 'Rhode Island', 
+	'CT': 'Connecticut', 
+	'MA': 'Massachusetts',
+	'ME': 'Maine', 
+	'NH': 'New Hampshire', 
+	'VT': 'Vermont', 
+	'NY': 'New York', 
+	'NJ': 'New Jersey', 
+	'PA': 'Philadephia', 
+	'DE': 'Delaware',
+	'MD': 'Maryland',
+	'WV': 'West Virginia',
+	'KY': 'Kentucky', 
+	'OH': 'Ohio', 
+	'MI': 'Michigan', 
+	'WY': 'Wyoming', 
+	'MT': 'Montana',
+	'ID': 'Idhaho',
+	'WA': 'Washington',
+	'DC': 'District of Columbia',
+	'TX': 'Texas',
+	'CA': 'California',
+	'AZ': 'Arizona',
+	'NV':'Nevada', 
+	'UT': 'Utah', 
+	'CO': 'Colorado', 
+	'NM': 'New Mexico', 
+	'OR': 'Oregon', 
+	'ND': 'North Dakota', 
+	'SD': 'South Dakota', 
+	'NE': 'Nebraska', 
+	'IA': 'Iowa', 
+	'MS': 'Mississippi', 	
+	'IN': 'Indiana', 
+	'IL': 'Illinois', 
+	'MN': 'Minnesota', 
+	'WI': 'Wisconsin', 
+	'MO': 'Missouri', 
+	'AR': 'Arkansas', 
+	'OK': 'Oklahoma', 
+	'KS': 'Kansas', 
+	'LA': 'Lousinia', 
+	'VA': 'Virginia'
+}
+</script>
+	<script>
+
+
+	$(document).ready(function() {
+	  $('#map').usmap({
+	    'stateSpecificStyles': {
+	      'AK' : {fill: '#f00'}
+	    },
+	    'stateSpecificHoverStyles': {
+	      'HI' : {fill: '#ff0'}
+	    },
+	    
+	    'mouseoverState': {
+	      'HI' : function(event, data) {
+	        //return false;
+	      }
+	    },
+	    
+	    
+	    'click' : function(event, data) {
+	      $('#alert')
+	        .text(state_dict[data.name] + '\nYes = ' + Math.round(red_data[data.name]["avg_cogn_yes"]) +'%\n' + 'No =' + Math.round(red_data[data.name]["avg_cogn_no"]) + "%\n"+ "\nNA =" + Math.round(red_data[data.name]["avg_cogn_na"]) + '%\n' )
+	        .stop()
+	        .css('backgroundColor', '#ff0')
+	        .animate({backgroundColor: '#ddd'}, 1000);
+	    }
+	  });
+	  
+	  $('#map2').usmap({
+	    'stateStyles': {
+	      fill: '#025', 
+	      "stroke-width": 1,
+	      'stroke' : '#036'
+	    },
+	    'stateHoverStyles': {
+	      fill: 'teal'
+	    },
+	    
+	    'click' : function(event, data) {
+	      $('#alert')
+	        .text('Click '+data.name+' on map 2')
+	        .stop()
+	        .css('backgroundColor', '#af0')
+	        .animate({backgroundColor: '#ddd'}, 1000);
+	    }
+	  });
+	  
+	  $('#over-md').click(function(event){
+	    $('#map').usmap('trigger', 'MD', 'mouseover', event);
+	  });
+	  
+	  $('#out-md').click(function(event){
+	    $('#map').usmap('trigger', 'MD', 'mouseout', event);
+	  });
+	});
+	</script>
+</head>
+<body>
+<center>
+  <div id="alert">Click On Any State</div>
+  
+  <div id="map" style="width: 930px; height: 630px; border: solid 3px red;"></div>
+  
+</center>
+</body>
+</html>
