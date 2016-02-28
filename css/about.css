@@ -6,6 +6,7 @@
 body{
 	height:100%;
 	width: 100%;
+	background-color: #E0F7FA;
 }
 @font-face
 {
@@ -70,4 +71,8 @@ iframe
 	height: 1200px;
 	width: 100%;
 	frameBorder="0";
+}
+
+.introduction{
+font-family: PT Sans;
 }

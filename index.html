@@ -10,8 +10,8 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 <body>
-  <div class="container">
-  <div class="jumbotron">
+  <div class="container" style="background-color:#E0F7FA">
+  <div class="jumbotron" style="background-color:#E0F7FA">
     <h1>No More Difficulty</h1>      
     <p>Want to know the statistics of people suffering from the vision, ambulatory, cognitive or hearing difficulties</p>
   </div>
@@ -19,30 +19,43 @@
     <li class="active"><a href="#">Home</a></li>
     <li><a href="html/about.html">About US</a></li>
     <li><a href="html/project.html">Data Visualization</a></li>
+     <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Top 10 States ON<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="html/vision_top10.html">Vision Difficulties</a></li>
+        <li><a href="html/cogn_top10.html">Cognitive Difficulties</a></li>
+        <li><a href="html/ambu_top10.html">Ampulatory Difficulties</a></li>
+        <li><a href="html/hearing_top10.html">Hearing Difficulties</a></li>
+      </ul>
+
   </ul>
 </div>
 
 <center>  
-  <p>
-        The maps show the data for each state on click with three key values:<br>
-        
-          Yes:<br>
-            Percentage of people with the difficulty
-          
-          No:<br>
-            Percentage of people without the difficulty
-          
-          NA:<br>
-            Percentage of people not sure
-    </p>
+  <div class="introduction">
+  <h3>  Want to know which state has the least population suffering from vision related disabilities? </br> </br>
+        Find out the state which has highest cognitive disability rate. 
+      </br> </br>
+       Want to make rules and regulations for reducing ambulatory difficulties? 
+     </br> </br>
+       Want to find the most diabilities free state?
+      </br> </br>
+      Do you want to avoid the highest diabilities prone state?
+    </br> </br>
+    <h2> Don't worry. You do not need to look at census data for this. </h2>
+    <h3> We have done all hard work. See the US map containing all information on diabilities. </h3>
+    <h3> Also, find the top 10 states with those diabilities </h3>
+    <h3> How we did it? </h3>
+    <ul>
+      <li> Utilized the data from ISG Synthetic Ecosystem </li>
+      <li> Used serial processing to mine data over 750 gigabytes </li>
+
 <p>To access the maps, click on the link below to go to the page with the project maps</p>
 <a href="html/project.html" text-decoration="none"><li>Project</li></a>
 <br>
 <p>Instructions for accessing the projects after opening the link: </p>
 <br>
-<p>To access the maps, click on the buttons. On click, the maps are displayed on below.</p>
-<br>
-<p>To get data for each state, click on the state. The data will be readily available on the alert box above the map.</p>
+<p>To access the information, just hover over the state you want to gather the information.  On hovering , the data is shown.</p>
 <br>
 
   </div>

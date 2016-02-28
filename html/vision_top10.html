@@ -1,0 +1,181 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+      var my_data = [['WV',
+  {'avg_ambu_na': 13.26491968631943,
+   'avg_ambu_no': 68.79266231307095,
+   'avg_ambu_yes': 17.942418000609628,
+   'avg_cogn_na': 13.264919686319427,
+   'avg_cogn_no': 75.21590940579884,
+   'avg_cogn_yes': 11.519170907881733,
+   'avg_hear_na': 8.491359005385034,
+   'avg_hear_no': 83.12535215170465,
+   'avg_hear_yes': 8.38328884291032,
+   'vision_difficulty_no': 83.90493520408634,
+   'vision_difficulty_yes': 7.60370579052862,
+   'vision_na': 8.491359005385037}],
+ ['GA',
+  {'avg_ambu_na': 10.648913824746515,
+   'avg_ambu_no': 75.61147514671914,
+   'avg_ambu_yes': 13.739611028534343,
+   'avg_cogn_na': 10.648913824746518,
+   'avg_cogn_no': 80.88499033502906,
+   'avg_cogn_yes': 8.466095840224423,
+   'avg_hear_na': 5.0264827181945755,
+   'avg_hear_no': 89.18151303898786,
+   'avg_hear_yes': 5.7920042428175655,
+   'vision_difficulty_no': 89.68953461594825,
+   'vision_difficulty_yes': 5.283982665857182,
+   'vision_na': 5.026482718194571}],
+ ['MA',
+  {'avg_ambu_na': 6.9297927863326265,
+   'avg_ambu_no': 82.95495708614558,
+   'avg_ambu_yes': 10.11525012752179,
+   'avg_cogn_na': 6.9297927863326265,
+   'avg_cogn_no': 85.8454509835811,
+   'avg_cogn_yes': 7.224756230086271,
+   'avg_hear_na': 1.8074827568362775,
+   'avg_hear_no': 93.07686052442874,
+   'avg_hear_yes': 5.115656718734984,
+   'vision_difficulty_no': 94.14139024624643,
+   'vision_difficulty_yes': 4.051126996917299,
+   'vision_na': 1.8074827568362704}],
+ ['AR',
+  {'avg_ambu_na': 10.448937524629414,
+   'avg_ambu_no': 76.5042893085574,
+   'avg_ambu_yes': 13.04677316681318,
+   'avg_cogn_na': 10.448937524629425,
+   'avg_cogn_no': 82.17082461830711,
+   'avg_cogn_yes': 7.380237857063466,
+   'avg_hear_na': 4.908706942718284,
+   'avg_hear_no': 89.17012741620944,
+   'avg_hear_yes': 5.921165641072276,
+   'vision_difficulty_no': 91.09703234411471,
+   'vision_difficulty_yes': 3.9942607131670154,
+   'vision_na': 4.9087069427182755}],
+ ['WA',
+  {'avg_ambu_na': 9.682814529140913,
+   'avg_ambu_no': 78.30368737948133,
+   'avg_ambu_yes': 12.01349809137775,
+   'avg_cogn_na': 9.682814529140918,
+   'avg_cogn_no': 81.43717287788753,
+   'avg_cogn_yes': 8.880012592971548,
+   'avg_hear_na': 5.043091574514971,
+   'avg_hear_no': 84.99567116603046,
+   'avg_hear_yes': 9.961237259454567,
+   'vision_difficulty_no': 91.01766951320295,
+   'vision_difficulty_yes': 3.939238912282083,
+   'vision_na': 5.043091574514971}],
+ ['IN',
+  {'avg_ambu_na': 9.166780088840497,
+   'avg_ambu_no': 79.57534738118511,
+   'avg_ambu_yes': 11.257872529974387,
+   'avg_cogn_na': 9.166780088840495,
+   'avg_cogn_no': 83.863324218315,
+   'avg_cogn_yes': 6.969895692844505,
+   'avg_hear_na': 3.6340464494735096,
+   'avg_hear_no': 91.00768383672157,
+   'avg_hear_yes': 5.358269713804922,
+   'vision_difficulty_no': 92.68488845444759,
+   'vision_difficulty_yes': 3.681065096078892,
+   'vision_na': 3.63404644947352}],
+ ['DC',
+  {'avg_ambu_na': 11.290675844806003,
+   'avg_ambu_no': 77.18789111389236,
+   'avg_ambu_yes': 11.521433041301627,
+   'avg_cogn_na': 11.290675844806005,
+   'avg_cogn_no': 79.50876095118899,
+   'avg_cogn_yes': 9.200563204005006,
+   'avg_hear_na': 5.430225281602009,
+   'avg_hear_no': 91.90394242803504,
+   'avg_hear_yes': 2.6658322903629537,
+   'vision_difficulty_no': 90.97856695869838,
+   'vision_difficulty_yes': 3.5912077596996244,
+   'vision_na': 5.430225281601995}],
+ ['LA',
+  {'avg_ambu_na': 8.73054118041442,
+   'avg_ambu_no': 82.9628388051988,
+   'avg_ambu_yes': 8.30662001438678,
+   'avg_cogn_na': 8.730541180414424,
+   'avg_cogn_no': 85.64674167347594,
+   'avg_cogn_yes': 5.622717146109633,
+   'avg_hear_na': 3.9298260316928175,
+   'avg_hear_no': 91.31694916437945,
+   'avg_hear_yes': 4.753224803927731,
+   'vision_difficulty_no': 92.48884326091056,
+   'vision_difficulty_yes': 3.581330707396621,
+   'vision_na': 3.9298260316928224}],
+ ['SD',
+  {'avg_ambu_na': 10.945258022260745,
+   'avg_ambu_no': 80.58734479053095,
+   'avg_ambu_yes': 8.467397187208308,
+   'avg_cogn_na': 10.945258022260743,
+   'avg_cogn_no': 83.25110401681714,
+   'avg_cogn_yes': 5.803637960922119,
+   'avg_hear_na': 5.470275866937534,
+   'avg_hear_no': 88.21153197530768,
+   'avg_hear_yes': 6.318192157754787,
+   'vision_difficulty_no': 90.9584356297406,
+   'vision_difficulty_yes': 3.5712885033218553,
+   'vision_na': 5.470275866937539}],
+ ['NM',
+  {'avg_ambu_na': 18.156023707014597,
+   'avg_ambu_no': 71.92515419419156,
+   'avg_ambu_yes': 9.918822098793834,
+   'avg_cogn_na': 18.156023707014604,
+   'avg_cogn_no': 75.88873916806345,
+   'avg_cogn_yes': 5.955237124921944,
+   'avg_hear_na': 12.460424403764204,
+   'avg_hear_no': 82.02254576527426,
+   'avg_hear_yes': 5.517029830961536,
+   'vision_difficulty_no': 83.97585477810279,
+   'vision_difficulty_yes': 3.5637208181330178,
+   'vision_na': 12.460424403764197}]
+]
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+  var colors_list = ['#FOF8FF', '#FAEBD7'];
+   var table_1 = [['State', 'Percentage of Population', {role: 'style'}]];
+  for (var i =0; i < 10; i++){
+    table_1.push([my_data[i][0], Math.round(my_data[i][1]['vision_difficulty_yes']), 'silver' ]);
+  }
+  console.log(table_1);
+
+      function drawStuff() {
+
+       var data1 = google.visualization.arrayToDataTable(table_1);
+        var options = {
+          title: 'Chess opening moves',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'Top 10 US States having highest vision difficulties',
+                   subtitle: '' },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Percentage of Population'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data1, options);
+      };
+    </script>
+  </head>
+  <body>
+    <center>
+    <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+  </center>
+  </body>
+</html>
